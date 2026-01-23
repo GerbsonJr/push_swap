@@ -1,0 +1,64 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gmateus- <gmateus@student.42lisboa.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/16 15:10:47 by gmateus-          #+#    #+#             */
+/*   Updated: 2026/01/22 11:24:27 by gmateus-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+
+# include "Libft/libft.h"
+# include <stdbool.h>
+# include <limits.h>
+
+typedef struct s_stacks
+{
+	int				value;
+	int				index;
+	struct s_stacks	*next;
+	struct s_stacks	*previous;
+}					t_stacks;
+
+// nodes
+void				start_stacks(char **argv, t_stacks **stack_a);
+t_stacks			*find_last_node(t_stacks *stack);
+int					stack_len(t_stacks *stack);
+void				normalize(t_stacks **stack_a);
+
+// parsing
+bool				check_doubles(char **av, int nbr);
+bool				check_input(char **av);
+void				print_error(t_stacks **stack_a, char **matriz);
+int					number_len(char *str);
+
+// utils
+long				ft_atol(char *str);
+bool				is_sorted(t_stacks *stack_a);
+void				mem_clear(t_stacks **stack_a, char **matriz);
+void				free_split(char **split);
+
+// operations
+void				rrr(t_stacks **stack_a, t_stacks **stack_b);
+void				pb(t_stacks **stack_a, t_stacks **stack_b);
+void				pa(t_stacks **stack_a, t_stacks **stack_b);
+void				ss(t_stacks **stack_a, t_stacks **stack_b);
+void				rra(t_stacks **stack_a);
+void				rrb(t_stacks **stack_b);
+void				sa(t_stacks **stack_a);
+void				sb(t_stacks **stack_b);
+void				ra(t_stacks **stack_a);
+void				rb(t_stacks **stack_b);
+
+// small_ sort
+void				small_sort(t_stacks **stack_a, t_stacks **stack_b, int len);
+
+// big_sort
+void				radix_sort(t_stacks **stack_a, t_stacks **stack_b, int len);
+
+#endif
