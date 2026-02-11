@@ -17,6 +17,8 @@ SRC_FOLDER = src
 SRCS = $(addprefix $(SRC_FOLDER)/, main.c utils.c parsing.c nodes.c operations1.c operations2.c small_sort.c radix.c)
 OBJS = $(SRCS:.c=.o)	
 
+.SILENT:
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -34,9 +36,10 @@ clean:
 fclean: clean
 	@rm -f $(NAME)
 	@rm -f libft.a
+	@make -s fclean -C Libft
 	@echo  "Biblioteca questionando a sua existencia, apos a mesma ser apagada da realidade que estamos."
 
 re: fclean all
 		@echo "A recompilacao foi executada como pedido Sr., as suas ordens."
 
-.PHONY: all cleam fclean re
+.PHONY: all clean fclean re
