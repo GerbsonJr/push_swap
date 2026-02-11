@@ -28,7 +28,7 @@ char	**parse_args(int argc, char **argv)
 	while (++i < argc)
 	{
 		if (argv[i][0] == '\0')
-			return (free_split(res),NULL);
+			return (free_split(res), NULL);
 		split = ft_split(argv[i], ' ');
 		if (!split || split[0] == NULL)
 			return (free_split(split), free_split(res), NULL);

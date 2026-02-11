@@ -80,15 +80,16 @@ void	sort_five(t_stacks **stack_a, t_stacks **stack_b)
 		ra(stack_a);
 	}
 	else if (last && last->previous
-		&& (last->index == smallest->index || last->previous->index == smallest->index))
+		&& (last->index == smallest->index
+			|| last->previous->index == smallest->index))
 		while ((*stack_a)->index != smallest->index)
 			rra(stack_a);
-	smallest = find_index(*stack_a, 0);
 	if ((*stack_a)->index == smallest->index)
 		pb(stack_a, stack_b);
 	sort_four(stack_a, stack_b, 1, 4);
 	pa(stack_a, stack_b);
 }
+
 void	small_sort(t_stacks **stack_a, t_stacks **stack_b, int len)
 {
 	normalize(stack_a);
