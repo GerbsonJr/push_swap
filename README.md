@@ -269,4 +269,6 @@ This project is part of the 42 School curriculum and follows its academic integr
 
 ## Valgrind
 
-	**valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes**
+```bash
+   valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes
+```
