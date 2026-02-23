@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   small_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmateus- <gmateus@student.42lisboa.com>    +#+  +:+       +#+        */
+/*   By: junior <junior@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 15:09:11 by gmateus-          #+#    #+#             */
-/*   Updated: 2026/01/22 17:26:37 by gmateus-         ###   ########.fr       */
+/*   Updated: 2026/02/23 13:14:09 by junior           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,6 @@ void	sort_five(t_stacks **stack_a, t_stacks **stack_b)
 
 void	small_sort(t_stacks **stack_a, t_stacks **stack_b, int len)
 {
-	normalize(stack_a);
 	if (len == 5)
 		sort_five(stack_a, stack_b);
 	else if (len == 4)
