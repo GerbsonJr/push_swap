@@ -6,7 +6,7 @@
 /*   By: junior <junior@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 15:02:30 by gmateus-          #+#    #+#             */
-/*   Updated: 2026/02/23 13:46:14 by junior           ###   ########.fr       */
+/*   Updated: 2026/03/16 00:06:23 by junior           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int	count_malloc(int argc, char **argv)
 {
-	int	i;
-	int	j;
-	int	count;
+	int		i;
+	int		j;
+	int		count;
 	char	**split;
 
 	count = 0;
